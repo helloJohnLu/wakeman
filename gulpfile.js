@@ -21,7 +21,7 @@ gulp.task('minifycss', function() {
         // 输出一个未压缩的版本
         .pipe(gulp.dest(CSS))
         .pipe(minifycss())
-        .pipe(rename({extname:'.min.css'}))
+        // 输出压缩版本
         .pipe(gulp.dest(CSS));
 });
 // 压缩 JS 文件
@@ -30,7 +30,7 @@ gulp.task('minify', function() {
         // 输入一个未压缩版本
         .pipe(gulp.dest(JS))
         .pipe(uglify())
-        .pipe(rename({extname:'.min.js'}))
+        // 输出压缩版本
         .pipe(gulp.dest(JS));
 });
 
